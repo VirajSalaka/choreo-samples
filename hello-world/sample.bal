@@ -8,6 +8,18 @@ service /hello/'1 on new http:Listener(8090) {
         return payload;
     }
 
+    resource function get greeting/'2 () returns string {
+        return payload;
+    }
+
+    resource function get greeting/'3 () returns string {
+        return payload;
+    }
+
+    resource function get greeting/'4 () returns string {
+        return payload;
+    }
+
     resource function get greeting/'5 () returns string {
         return payload;
     }
