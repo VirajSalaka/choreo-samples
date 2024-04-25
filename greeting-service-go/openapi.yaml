@@ -25,3 +25,201 @@ paths:
                 type: string
       deprecated: false
       security: []
+  /greeter/greet/2:
+    get:
+      summary: Greet a person
+      description: Greet a person by name
+      tags:
+        - greeting
+      parameters:
+        - name: name
+          in: query
+          description: Name of the person to greet
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/plain:
+              schema:
+                type: string
+      deprecated: false
+      security: []
+  /greeter/greet/3:
+    get:
+      summary: Greet a person
+      description: Greet a person by name
+      tags:
+        - greeting
+      parameters:
+        - name: name
+          in: query
+          description: Name of the person to greet
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/plain:
+              schema:
+                type: string
+      deprecated: false
+      security: []
+  /greeter/greet/4:
+    get:
+      summary: Greet a person
+      description: Greet a person by name
+      tags:
+        - greeting
+      parameters:
+        - name: name
+          in: query
+          description: Name of the person to greet
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/plain:
+              schema:
+                type: string
+      deprecated: false
+      security: []
+  /greeter/greet/5:
+    get:
+      summary: Greet a person
+      description: Greet a person by name
+      tags:
+        - greeting
+      parameters:
+        - name: name
+          in: query
+          description: Name of the person to greet
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/plain:
+              schema:
+                type: string
+      deprecated: false
+      security: []
+  /greeter/greet/6:
+    get:
+      summary: Greet a person
+      description: Greet a person by name
+      tags:
+        - greeting
+      parameters:
+        - name: name
+          in: query
+          description: Name of the person to greet
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/plain:
+              schema:
+                type: string
+      deprecated: false
+      security: []
+  /greeter/greet/7:
+    get:
+      summary: Greet a person
+      description: Greet a person by name
+      tags:
+        - greeting
+      parameters:
+        - name: name
+          in: query
+          description: Name of the person to greet
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/plain:
+              schema:
+                type: string
+      deprecated: false
+      security: []
+  /greeter/greet/8:
+    get:
+      summary: Greet a person
+      description: Greet a person by name
+      tags:
+        - greeting
+      parameters:
+        - name: name
+          in: query
+          description: Name of the person to greet
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/plain:
+              schema:
+                type: string
+      deprecated: false
+      security: []
+  /greeter/greet/9:
+    get:
+      summary: Greet a person
+      description: Greet a person by name
+      tags:
+        - greeting
+      parameters:
+        - name: name
+          in: query
+          description: Name of the person to greet
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/plain:
+              schema:
+                type: string
+      deprecated: false
+      security: []
+  /greeter/greet/10:
+    get:
+      summary: Greet a person
+      description: Greet a person by name
+      tags:
+        - greeting
+      parameters:
+        - name: name
+          in: query
+          description: Name of the person to greet
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/plain:
+              schema:
+                type: string
+      deprecated: false
+      security: []                

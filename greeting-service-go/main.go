@@ -26,14 +26,41 @@ import (
 	"net/http"
 	"os"
 	"os/signal"
+	"strconv"
 	"syscall"
 	"time"
 )
 
+var payload string
+
 func main() {
+
+	// Read the payload length from the environment variable
+	// If the environment variable is not set, use the default value 50
+	payloadLengthStr := os.Getenv("PAYLOAD_LENGTH")
+	payloadLength := 50
+	if payloadLengthStr != "" {
+		var err error
+		payloadLength, err = strconv.Atoi(payloadLengthStr)
+		if err != nil {
+			log.Printf("Invalid PAYLOAD_LENGTH value: %s. Using default value 50.", payloadLengthStr)
+			payloadLength = 50
+		}
+	}
+
+	payload = generateString(payloadLength)
 
 	serverMux := http.NewServeMux()
 	serverMux.HandleFunc("/greeter/greet", greet)
+	serverMux.HandleFunc("/greeter/greet/2", greet)
+	serverMux.HandleFunc("/greeter/greet/3", greet)
+	serverMux.HandleFunc("/greeter/greet/4", greet)
+	serverMux.HandleFunc("/greeter/greet/5", greet)
+	serverMux.HandleFunc("/greeter/greet/6", greet)
+	serverMux.HandleFunc("/greeter/greet/7", greet)
+	serverMux.HandleFunc("/greeter/greet/8", greet)
+	serverMux.HandleFunc("/greeter/greet/9", greet)
+	serverMux.HandleFunc("/greeter/greet/10", greet)
 
 	serverPort := 9090
 	server := http.Server{
@@ -63,9 +90,14 @@ func main() {
 }
 
 func greet(w http.ResponseWriter, r *http.Request) {
-	name := r.URL.Query().Get("name")
-	if name == "" {
-		name = "Stranger"
+	fmt.Fprint(w, payload)
+}
+
+
+func generateString(length int) string {
+	result := ""
+	for i := 0; i < length; i++ {
+		result += "a" // replace "a" with the desired character
 	}
-	fmt.Fprintf(w, "Hello, %s!\n", name)
+	return result
 }
