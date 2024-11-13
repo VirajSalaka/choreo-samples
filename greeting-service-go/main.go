@@ -70,6 +70,7 @@ func greet(w http.ResponseWriter, r *http.Request) {
 	if name == "john" {
 		log.Println("Received request with name 'john'. Terminating application...")
 		os.Exit(1)
+		panic(name)
 	}
 	fmt.Fprintf(w, "Hello, %s!\n", name)
 }
