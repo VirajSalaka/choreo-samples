@@ -67,5 +67,13 @@ func greet(w http.ResponseWriter, r *http.Request) {
 	if name == "" {
 		name = "Stranger"
 	}
+	if name == "john" {
+		log.Println("Received request with name 'john'. Simulating OOM error...")
+		var mem [][]int
+		// Continuously allocate memory until OOM occurs
+		for {
+			mem = append(mem, make([]int, 1024*1024*10)) // Allocate ~40MB per iteration
+		}
+	}
 	fmt.Fprintf(w, "Hello, %s!\n", name)
 }
