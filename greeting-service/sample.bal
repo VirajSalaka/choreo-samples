@@ -6,11 +6,9 @@ type Greeting record {
     string message;
 };
 
-configurable string myconfigurable = ?;
-
 service / on new http:Listener(8090) {
     resource function get .(string name) returns Greeting {
-        Greeting greetingMessage = {"from" : "Choreo", "to" : name, "message" : "Welcome to Choreo!", "config": myconfigurable};
+        Greeting greetingMessage = {"from" : "Choreo", "to" : name, "message" : "Welcome to Choreo!"};
         return greetingMessage;
     }
 }
