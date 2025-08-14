@@ -32,4 +32,9 @@ service / on new http:Listener(8090) {
         Greeting greetingMessage = {"from" : "Choreo temp4", "to" : name, "message" : "Welcome to Choreo!"};
         return greetingMessage;
     }
+
+    resource function get temp5 (string name) returns Greeting {
+        Greeting greetingMessage = {"from" : "Choreo temp4", "to" : name, "message" : "Welcome to Choreo!"};
+        return greetingMessage;
+    }
 }
